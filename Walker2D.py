@@ -29,21 +29,22 @@ def runModel(episodes=5):
     env.close()
 
 # Run the Model
-runModel(7)
+#runModel(7)
 
 # Set model path
-#PPO_path = os.path.join('Saved_Models', 'PPO_model1K')
-#
-## Train Model
-#def trainAndSaveModel():
-#    # Train Model
-#    env = DummyVecEnv([lambda: env])
-#    model = PPO('MlpPolicy', env, verbose = 1)
-#    model.learn(total_timesteps=1000)
-#    
-#    # Save Model
-#    print(PPO_path)
-#    model.save(PPO_path)
-#
+PPO_path = os.path.join('Saved_Models', 'PPO_model1K')
+
+# Train Model
+def trainAndSaveModel():
+    # Train Model
+    #env = DummyVecEnv([lambda: env])
+    model = PPO('MlpPolicy', env, verbose = 1)
+    model.learn(total_timesteps=1000)
+    
+    # Save Model
+    print(PPO_path)
+    model.save(PPO_path)
+
+trainAndSaveModel()
 #model = PPO.load(PPO_path, env=env)
 #runModel(7)
