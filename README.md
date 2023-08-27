@@ -1,12 +1,4 @@
 # Walker2D
-
-## Dependencies
-- python3 -m pip install mujoco
-- python3 -m pip install imageio
-
-
-
-# Walker2D
 Repository to solve Walker2D from Gymnasium
 https://gymnasium.farama.org/environments/mujoco/walker2d/
 
@@ -25,3 +17,5 @@ https://gymnasium.farama.org/environments/mujoco/walker2d/
 - pip install stable_baselines3
 - pip install --upgrade gym
 - pip install --upgrade pygame
+- python3 -m pip install mujoco
+- python3 -m pip install imageio
