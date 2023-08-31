@@ -11,7 +11,7 @@ from stable_baselines3.common.evaluation import evaluate_policy
 # Set Variables
 envName = 'Walker2d-v4'
 # Set model path
-PPO_path = os.path.join('Saved_Models', 'PPO_model1K')
+PPO_path = os.path.join('Saved_Models', 'PPO_model4M')
 
 # Load Environment
 env = gym.make(envName, render_mode='human')
@@ -59,13 +59,13 @@ def evalModel():
 
 # Disclaimer: comment and uncomment the functions depending on the actions needed
 
-trainAndSaveModel()
+#trainAndSaveModel()
 
 #Load Model
-#model = PPO.load(PPO_path, env=env)
+model = PPO.load(PPO_path, env=env)
 
 # Run the Model
 #runModel(7)
 
 # Evaluate the Model
-#evalModel()
+evalModel()
